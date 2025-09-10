@@ -12,6 +12,8 @@ I can help improve the flight controller by joining Reinforcement Learning resea
 
 3. What’s the “industry standard” for drone software in 2025?
 
-The "industry standard" for drone software is ROS for flight software, advanced SLAM, path planning, and AI inference for real-time autonomy, automated risk assessments and airspace alerts for compliance and safety, and cloud data integration.
+The "industry standard" for drone software is ROS for flight software, advanced SLAM, path planning, and AI inference for real-time autonomy, automated risk assessments and airspace alerts for compliance and safety, and cloud data integration. BVLOS and swarming are the most recent advancements.
 
 4. How does one learn about drones effectively in 2025?
+
+One learns about drones effectively in 2025 by asking AI for conceptual questions (or help with code) and gaining experience. One suggestion for learning about drones (or any other subject) effectively by talking with AI to make sure you understand it at a broad level, do projects, track your progress, combine AI with fact-checking for individual details, and reach out to others for help.
