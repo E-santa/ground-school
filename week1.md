@@ -11,4 +11,7 @@ For software, it has object detection, aerial imagery and stitching, the flight 
 I can help improve the flight controller by joining Reinforcement Learning research, help improve the stitching code, improve the object detection system, help 3D mapping for environmental research projects, or research anything else I want.
 
 3. What’s the “industry standard” for drone software in 2025?
+
+The "industry standard" for drone software is ROS for flight software, advanced SLAM, path planning, and AI inference for real-time autonomy, automated risk assessments and airspace alerts for compliance and safety, and cloud data integration.
+
 4. How does one learn about drones effectively in 2025?
