@@ -22,8 +22,20 @@
 
    d. YOLO is a one-shot CNN, which sacrifices some accuracy for speed.
 
-   e. For training, we split our data in 3: training (actually changes weights), validation (for changing hyperparameters), and test (actually evaluates how good model is). Usually, a 70/20/10 training/validation/test split is good.
+   e. For training, we split our data in 3: training (actually changes weights), validation (for changing hyperparameters and deciding when to stop training to avoid overfitting), and test (actually evaluates how good model is). Usually, a 70/20/10 training/validation/test split is good.
 
-5. How can our club leverage our manpower to label many images in a short amount of time on roboflow?
-6. What are some upsides and downsides to using YOLO for our competition vehicle?
+4. How can our club leverage our manpower to label many images in a short amount of time on roboflow?
+
+   a. Roboflow is a website to conveniently label images and deploy models.
+
+5. What are some upsides and downsides to using YOLO for our competition vehicle?
+
+   a. The upside to using YOLO as opposed to blob detection is that it is more accurate, and the upside to using YOLO as opposed to other object detection models like RCNN is that it is more compute-efficient.
+
+   b. The downside to using YOLO as opposed to blob detection is that it is more compute-intensive, while the downside to using YOLO as opposed to other object detection models like RCNN is that it is less accurate.
+   
 7. What other techniques might there be for object detection?
+
+   a. We can try other object detection models not from the YOLO family (might be more lightweight and/or accurate, SSD MobileNet and EfficientDet seem promising).
+
+   b. We can try using color change boundaries to detect models (lightweight, but not very useful).
