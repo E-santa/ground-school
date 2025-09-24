@@ -1,4 +1,4 @@
-## Week 2 Notes
+## Week 3 Notes
 
 1. How are drones used for aerial imagery purposes?  
    1. Uses:  
