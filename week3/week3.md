@@ -8,8 +8,16 @@
 
    c. OpenCV SimpleBlobDetector: convert RGB to Grayscale, then threshold to get binary image, then group white pixels into blobs
 
-3. How can blob detection be used to find objects in a field? What are its benefits and limitations?
-4. What are the underlying mechanics of the convolutional neural network used in the YOLO model?
-5. How can our club leverage our manpower to label many images in a short amount of time on roboflow?
-6. What are some upsides and downsides to using YOLO for our competition vehicle?
-7. What other techniques might there be for object detection?
+2. How can blob detection be used to find objects in a field? What are its benefits and limitations?
+
+   a. Blob detection can be used to find where stuff is and isn't with blobs being revealed to be certain stuff, and it's lightweight but it isn't exactly the most sophisticated when it comes to differentiating between objects.
+
+3. What are the underlying mechanics of the convolutional neural network used in the YOLO model?
+
+   a. A neural network acts like a multilayer "linear" classifier, only with nonlinear behavior modeled through activation functions peppered in after each linear layer.
+   b. During training, the weights and biases are updated through gradient descent in order to minimize the loss function (measure of error).
+   c. The convolutional neural network used in the YOLO model includes a series of convolutions before the rest of the neural network, and said convolutions' values are updated along with the weights and biases during training.
+
+4. How can our club leverage our manpower to label many images in a short amount of time on roboflow?
+5. What are some upsides and downsides to using YOLO for our competition vehicle?
+6. What other techniques might there be for object detection?
