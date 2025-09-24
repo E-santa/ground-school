@@ -22,6 +22,8 @@
 
    d. YOLO is a one-shot CNN, which sacrifices some accuracy for speed.
 
+   e. For training, we split our data in 3: training (actually changes weights), validation (for changing hyperparameters), and test (actually evaluates how good model is). Usually, a 70/20/10 training/validation/test split is good.
+
 5. How can our club leverage our manpower to label many images in a short amount of time on roboflow?
 6. What are some upsides and downsides to using YOLO for our competition vehicle?
 7. What other techniques might there be for object detection?
