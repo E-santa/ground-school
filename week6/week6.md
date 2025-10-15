@@ -1,27 +1,42 @@
 ## Week 6 Notes
 
-1. How do we communicate with the drone while it’s in the air?
+1. What are the benefits of simulating a drone with software/hardware-in-the-loop before flying?
 
-   a. The ground station communicates with the onboard computer over WiFi, with the drone being a WiFi hotspot. This uses the UDP protocol, which is different from TCP in that instead of being reliable through acknowledgement of a stable connection it allows for packet loss by just throwing data and seeing what sticks (being faster and more lightweight), which is less of a hassle for one-way transmission of real-time data.
+   a. Simulating a drone provides cost savings as crashing real drones is expensive and more importantly allows for faster testing through its modeling of real-life scenarios, processing power (hardware-in-the-loop), and communication links.
 
-   b. The flight controller communicates with the ground station using radio.
+   b. Simulating a drone allows for getting thousands of realistic flights to train AI models.
 
-2. What is the role of the onboard computer system and how does it complement the flight controller? How does it communicate?
+   c. Simulator examples include Gazebo (with PX4), Isaac Sim, ArduPilot, AirSim, and Flightmare.
 
-   a. The onboard computer system runs ROS in order to do complex tasks for decision-making and higher-level control like object detection, SLAM, and mission logic.
+2. How is machine learning used to improve drone autonomy (navigation, obstacle avoidance, etc.)? What benefits does it have over traditional guidance systems like PID loops?
 
-   b. The onboard computer uses Ethernet to connect to the gimbal camera, USB-C to transfer data, HDMI to see what's in the brain of the computer (if needed), and 40 extra pins.
+   a. Supervised ML learns from labeled flight data for things like obstacle detection, unsupervised ML discovers pattern in sensor data for things like terrain clustering, and reinforcement learning learns by trial and error in simulation for things like agile maneuvers.
 
-3. What are the trade-offs between different data links (WiFi, radio, LTE)?
+   b. Machine learning is used for navigation and path planning in cluttered environments, real-time obstacle avoidance using vision models, and adaptive control under disturbances (like wind).
 
-   a. WiFi has high bandwidth and works for short-range communications, but requires line of sight and has a very limited range (no more than a few hundred meters) with some interference in commonly used bands.
+   c. One challenge with these policies is Sim2Real transfer: making sure simulation-based policies work in the real world (ideal is zeroshot: works perfectly on the first try).
 
-   b. Radio is very long range and reliable and low-latency, but requires dedicated hardware and is low bandwidth (and has regulations on allowed frequencies).
+   d. A benefit machine learning has over traditional guidance systems is that it requires less human effort in finetuning policies manually.
 
-   c. LTE has a very wide coverage, has a high bandwidth and datarate, and runs on cell towers such that no line of sight is required, but latency is still higher than WiFi, it requires a SIM card and data plan, and depending on how far you are from cities you still have dead zones.
+3. What is ROS, and why is it universal in autonomous robotics?
 
-   d. Starlink is new and requires a heavy terminal, but it has the benefits of cellular without any coverage problems.
+   a. Robot Operating System (ROS) is not an operating system, but rather a piece of middleware that helps different parts of a robot communicate.
 
-4. How does the onboard computer connect to the ground station or other devices over WiFi? (SSH tutorial)
+   b. ROS includes a modular, node-based system for reusable code, communication systems to pass messages between nodes, an ecosystem with lots of ROS packages for existing sensors, and simulation support for Gazebo and Isaac Sim out of the box, which is why almost everyone else uses it.
 
-   a. The onboard computer connects to devices over WiFi using SSH.
+   c. A ROS Node is a process that performs a specific function, a ROS Topic is a named place where nodes can publish messages or subscribe to listen for messages, a ROS Message is a data structure sent between nodes, a ROS Service is a request/response communnication directly between nodes, a ROS Action is a Service that supports long-running tasks, a ROS Package is a collection of ROS code, nodes, and config files, and a ROS Launch File is a script that starts and initializes nodes.
+
+4. What are the steps/challenges of deploying ROS on embedded systems like the drone?
+
+   a. Install ROS 2 Humble (newer versions exist but aren't necessarily compatible with everything else) on Ubuntu
+
+   b. Try running a demo
+
+   c. Use a simulation (e.g. Gazebo) to test ROS with an actual drone
+
+   d. Explore ROS tutorials to do more stuff
+
+5. Thanks and final thoughts
+
+   Thank you, Isaac, for teaching us so much about drones!
+
